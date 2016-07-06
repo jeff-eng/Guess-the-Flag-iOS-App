@@ -34,11 +34,11 @@ class ViewController: UIViewController {
         button2.layer.borderColor = UIColor.lightGrayColor().CGColor
         button3.layer.borderColor = UIColor.lightGrayColor().CGColor
         
-        askQuestion()
+        askQuestion(nil)
         
     }
     
-    func askQuestion() {
+    func askQuestion(action: UIAlertAction!) {
         countries = GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(countries) as! [String]
         button1.setImage(UIImage(named: countries[0]), forState: .Normal)
         button2.setImage(UIImage(named: countries[1]), forState: .Normal)
@@ -48,6 +48,22 @@ class ViewController: UIViewController {
         title = countries[correctAnswer].uppercaseString
     }
 
+    @IBAction func buttonTapped(sender: UIButton) {
+        var title: String
+        
+        if sender.tag == correctAnswer {
+            title = "Correct"
+            score += 1
+        } else {
+            title = "Wrong"
+            score -= 1
+        }
+        
+        let ac = UIAlertController(title: title, message: "Your score is \(score).", preferredStyle: .Alert)
+        ac.addAction(UIAlertAction(title: "Continue", style: .Default, handler: askQuestion))
+        presentViewController(ac, animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
