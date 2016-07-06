@@ -10,7 +10,7 @@ Repo for my project 'Guess the Flag' iOS app tutorial on www.hackingwithswift.co
 * Enums
 * CALayer (CA stands for Core Animation)
 * UIColor
-* Random numbers
+* Random numbers using GameplayKit
 * Actions
 * String Interpolation
 * UIAlertController

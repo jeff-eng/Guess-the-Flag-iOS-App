@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var button3: UIButton!
     
     var countries = [String]()
+    var correctAnswer = 0 //Stores whether flag 0, 1, or 2 holds correct answer
     var score = 0
     
     override func viewDidLoad() {
@@ -30,6 +31,8 @@ class ViewController: UIViewController {
             button1.setImage(UIImage(named: countries[0]), forState: .Normal)
             button2.setImage(UIImage(named: countries[1]), forState: .Normal)
             button3.setImage(UIImage(named: countries[2]), forState: .Normal)
+            correctAnswer = GKRandomSource.sharedRandom().nextIntWithUpperBound(3)
+            title = countries[correctAnswer].uppercaseString
         }
         
         button1.layer.borderWidth = 1
