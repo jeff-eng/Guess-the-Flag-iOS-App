@@ -1,6 +1,8 @@
 # Guess-the-Flag-iOS-App
 Repo for my project 'Guess the Flag' iOS app tutorial on www.hackingwithswift.com. Goal of project is to learn UIKit by making a game, as well as learning about integers, buttons, colors, and actions.
 
+![Guess the Flag App screenshot](/AppScreenshot.png)
+
 ## Concepts Learned/Practiced
 * @2x and @3x images
 * Asset catalogs
