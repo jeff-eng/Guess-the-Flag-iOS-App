@@ -8,7 +8,7 @@ Repo for my project 'Guess the Flag' iOS app tutorial on www.hackingwithswift.co
 * Operators: ```+=```, ```++```, ```--```
 * UIButton
 * Enums
-* CALayer
+* CALayer (CA stands for Core Animation)
 * UIColor
 * Random numbers
 * Actions
