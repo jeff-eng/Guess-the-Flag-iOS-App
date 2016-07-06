@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GameplayKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var button1: UIButton!
@@ -25,6 +26,7 @@ class ViewController: UIViewController {
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
         
         func askQuestion() {
+            countries = GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(countries) as! [String]
             button1.setImage(UIImage(named: countries[0]), forState: .Normal)
             button2.setImage(UIImage(named: countries[1]), forState: .Normal)
             button3.setImage(UIImage(named: countries[2]), forState: .Normal)
